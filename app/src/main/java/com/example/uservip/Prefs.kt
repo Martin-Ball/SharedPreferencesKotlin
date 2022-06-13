@@ -25,4 +25,8 @@ class Prefs(val context:Context ) {
         return storage.getBoolean(SHARED_VIP, false)
     }
 
+    fun wipe(){
+        storage.edit().clear().apply()
+    }
+
 }

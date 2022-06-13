@@ -10,7 +10,7 @@ class UserVipApplication : Application() {   //Application es una clase que se e
 
     override fun onCreate() {
         super.onCreate()
-        val prefs = Prefs(applicationContext)
+        prefs = Prefs(applicationContext)
 
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.Toast
 import com.example.uservip.UserVipApplication.Companion.prefs
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initUI()
+        checkUserValues()
+    }
+
+    fun checkUserValues(){
+        if(prefs.getName().isNotEmpty()){
+            goToDetail()
+        }
     }
 
     fun initUI(){
@@ -33,6 +41,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goToDetail(){
-        startActivity(Intent(this, ResultActivity::class.java))
+       startActivity(Intent(this, ResultActivity::class.java))
     }
 }

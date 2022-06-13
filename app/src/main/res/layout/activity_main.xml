@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
-        android:text="Nombre" />
+        android:hint="Nombre" />
 
     <CheckBox
         android:id="@+id/cbVip"
