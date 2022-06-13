@@ -18,7 +18,7 @@ class ResultActivity : AppCompatActivity() {
 
     fun initUI(){
         val btnBack = findViewById<Button>(R.id.btnBack)
-        val tvName = findViewById<TextView>(R.id.etName)
+        val tvName = findViewById<TextView>(R.id.tvName)
 
         btnBack.setOnClickListener{
             prefs.wipe()
@@ -26,6 +26,7 @@ class ResultActivity : AppCompatActivity() {
         }
 
         val userName = prefs.getName()
+
         tvName.text = "Bienvenido $userName"
 
         if(prefs.getVip()){
